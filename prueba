@@ -1,0 +1,58 @@
+            display: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recomendaciones de Manuales de Estilo</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Manual de Estilo</th>
+                <th>Recomendación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Manual de Estilo de Chicago</td>
+                <td>Uso de Voz Activa</td>
+            </tr>
+            <tr class="panel">
+                <td colspan="2">El manual de Chicago recomienda el uso de la voz activa para mayor claridad y concisión en la escritura.</td>
+            </tr>
+            <tr>
+                <td>Manual APA</td>
+                <td>Uso de Voz Activa</td>
+            </tr>
+            <tr class="panel">
+                <td colspan="2">El manual APA también favorece la voz activa para hacer el texto más directo y fácil de entender.</td>
+            </tr>
+            <tr>
+                <td>Manual MLA</td>
+                <td>Uso de Voz Pasiva</td>
+            </tr>
+            <tr class="panel">
+                <td colspan="2">El manual MLA permite el uso de la voz pasiva en casos donde el énfasis está en la acción en lugar del sujeto.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var headers = document.querySelectorAll('table th');
+            var panels = document.querySelectorAll('.panel');
+
+            headers.forEach(function(header, index) {
+                header.addEventListener('click', function() {
+                    var panel = panels[index];
+                    if (panel.style.display === "table-row") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "table-row";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
